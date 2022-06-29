@@ -23,7 +23,7 @@ public class ProductController {
         List<Product> listProducts = productService.findAll();
         if (listProducts.isEmpty()){
             return ResponseEntity.ok(new ResponseObject("Failed",
-                    "List product empty!!!",""));
+                    "List product empty!!!","[]"));
         }
         return ResponseEntity.ok(new ResponseObject("OKE",
                 "Query list product successfully!",listProducts));
